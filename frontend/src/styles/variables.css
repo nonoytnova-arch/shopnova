@@ -1,0 +1,110 @@
+:root {
+  /* Surfaces */
+  --color-bg: #0B0D12;
+  --color-bg-alt: #0F121A;
+  --color-surface: #151922;
+  --color-surface-alt: #1B2029;
+  --color-glass: rgba(21, 25, 34, 0.72);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border-strong: rgba(255, 255, 255, 0.22);
+
+  /* Text */
+  --color-text: #FFFFFF;
+  --color-text-muted: #A7A9B4;
+  --color-text-faint: #71747F;
+
+  /* Brand accents */
+  --color-primary: #9B75F5;        /* visible accent: borders, glows, links, badges */
+  --color-primary-strong: #7C4FE0; /* solid button fill (better contrast with white text) */
+  --color-primary-dark: #6435C9;   /* hover state for solid buttons */
+  --color-secondary: #35C9AE;
+  --color-secondary-dark: #28A28C;
+
+  --color-success: #35C9AE;
+  --color-success-bg: rgba(53, 201, 174, 0.14);
+  --color-danger: #F2555A;
+  --color-danger-bg: rgba(242, 85, 90, 0.14);
+  --color-warning: #F5B954;
+  --color-warning-bg: rgba(245, 185, 84, 0.14);
+  --color-info: #6FA8FF;
+  --color-info-bg: rgba(111, 168, 255, 0.14);
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #2A1B4D 0%, #3B2064 45%, #1C1030 100%);
+  --gradient-accent: linear-gradient(135deg, #9B75F5 0%, #6435C9 100%);
+  --gradient-card-media: linear-gradient(135deg, #3B2064 0%, #1B2029 100%);
+
+  /* Layout */
+  --container-width: 1240px;
+  --header-height: 68px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 0 1px rgba(155, 117, 245, 0.25), 0 8px 24px rgba(155, 117, 245, 0.18);
+
+  /* Blur */
+  --blur-glass: blur(16px);
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Motion */
+  --transition-fast: 150ms ease;
+  --transition-base: 220ms ease;
+}
+
+/* ---------- Mobile layout safety ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container,
+  .page-container,
+  main,
+  footer {
+    max-width: 100%;
+  }
+
+  .cart-layout,
+  .checkout-layout,
+  .account-layout,
+  .products-layout,
+  .pd-layout {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .table-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
